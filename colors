@@ -1,0 +1,116 @@
+# vi: ft=neomuttrc
+
+# progress bar
+color progress default color236
+
+color status black color15
+color indicator black color7
+
+#color tree       red          white
+
+### Sidebar ###
+color sidebar_indicator black white
+color sidebar_highlight white brightblack
+color sidebar_spoolfile yellow default
+color sidebar_flagged red default
+color sidebar_divider color8 default
+color sidebar_new brightblue default
+
+### Mail headers ###
+color hdrdefault default color18
+color header brightcolor1 color18 "^From:"
+color header brightblue color18 "^To"
+color header brightyellow color18 "^Cc:"
+color header brightgreen color18 "^Subject:"
+color header white color18 "^X-[^:]*:"
+color header white color18 "^User-Agent:"
+color search black yellow
+
+### Mail parts ###
+color   signature     brightgreen     default # signatures
+color   quoted  cyan    default # quoted text
+color   quoted1 yellow  default # quote level 2
+color   quoted2 green   default # quote level 3
+color   quoted3 magenta default # quote level 4
+color   quoted4 red     default # quote level 5
+
+### Highlighting in mail body ###
+# my name
+color body red default "Leons?\\b"
+color body red default "Georgis?\\b"
+# color body red default "Leon"
+# links
+color body brightblue default "(gopher|finger|ftp|http|telnet|https)://[^ >]*"
+# TL;DR
+color body white red "[Tt][Ll][;, ]?[Dd][Rr]"
+# link numbers ([0], [1], …)
+color body red default "\\[[(0-9)+]\\]"
+# mail adresses
+color body brightblue default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+# CYBER
+color body black yellow "[Cc][Yy][Bb][Ee][Rr]"
+# smileys:  :-)  ;-)  :-/  :-(
+color body yellow default " [;:]-?[)/(|]"
+
+# Translate bold and underlined
+color bold brightwhite default
+color underline brightwhite default
+
+color attachment default brightblack
+
+#color markers black color20
+color index color15 default '.*'
+
+color index brightdefault color18 "~N"
+
+### Mail list ###
+
+## Mails sent to me
+#color index red default "~C leon@ifsr\.de"
+#color index red default "~C leon\.georgi@tu-dresden\.de"
+#color index red default "~C leon\.georgi@mailbox\.tu-dresden\.de"
+#color index red default "~C s5973078@msx\.tu-dresden\.de"
+#color index red default "~C s5973078@mail\.zih\.tu-dresden\.de"
+#
+## Unread mails for me
+#color index brightred color236 "~C leon@ifsr\.de ~N"
+#color index brightred color236 "~C leon\.georgi@tu-dresden\.de ~N"
+#color index brightred color236 "~C leon\.georgi@mailbox\.tu-dresden\.de ~N"
+#color index brightred color236 "~C s5973078@msx\.tu-dresden\.de ~N"
+#color index brightred color236 "~C s5973078@mail\.zih\.tu-dresden\.de ~N"
+
+# Mailing lists
+color index green default "~C fsr@ifsr\.de"
+color index brightgreen color18 "~C fsr@ifsr\.de ~N"
+
+color index blue default "~C leongeorgi98@gmail.com"
+color index brightblue color18 "~C leongeorgi98@gmail.com ~N"
+color index cyan default "~C naytde@gmail.com"
+color index brightcyan color18 "~C naytde@gmail.com ~N"
+
+# own mails
+color index color8 default "~f leon@ifsr.de"
+color index color8 default "~f leon\.georgi@tu-dresden\.de"
+color index color8 default "~f leon\.georgi@mailbox\.tu-dresden\.de"
+color index color8 default "~f s5973078@msx\.tu-dresden\.de"
+color index color8 default "~f s5973078@mail\.zih\.tu-dresden\.de"
+color index color8 default "~f leongeorgi98@gmail.com"
+color index color8 default "~f naytde@gmail.com"
+
+color index magenta default "~C leon\.georgi@tu-dresden\.de"
+color index brightmagenta color18 "~C leon\.georgi@tu-dresden\.de ~N"
+color index magenta default "~C leon\.georgi@mailbox\.tu-dresden\.de"
+color index brightmagenta color18 "~C leon\.georgi@mailbox\.tu-dresden\.de ~N"
+color index magenta default "~C s5973078@msx\.tu-dresden\.de"
+color index brightmagenta color18 "~C s5973078@msx\.tu-dresden\.de ~N"
+color index magenta default "~C s5973078@mail\.zih\.tu-dresden\.de"
+color index brightmagenta color18 "~C s5973078@mail\.zih\.tu-dresden\.de ~N"
+color index color16 default "~C leon@ifsr.de"
+color index brightcolor16 color18 "~C leon@ifsr.de ~N"
+#color index_tag red white "spam"
+
+color index yellow default "~f board@ascii\.coffee"
+color index brightyellow color18 "~f board@ascii\.coffee ~N"
+
+color index brightred default "~F"      # Marked mails
+color index color19 default "~D"    # Deleted mails

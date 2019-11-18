@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+TMP_FILE=$(mktemp)
+cp $1 $TMP_FILE
+(
+    termite -e "neomutt -F ~/.mutt/profiles/compose -H $TMP_FILE"
+    rm $TMP_FILE
+) &

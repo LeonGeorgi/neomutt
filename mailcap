@@ -1,0 +1,11 @@
+text/plain; cat %s; copiousoutput;
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#text/html; !w3m -o auto_image=TRUE http://google.com
+#text/html; cat %s | cat "$@"| w3m -o auto_image=TRUE -I %{charset} -T text/html -F
+application/pdf; ~/.mutt/viewer zathura %s;
+
+image/png; ~/.mutt/viewer sxiv %s;
+image/jpg; ~/.mutt/viewer sxiv %s;
+image/jpeg; ~/.mutt/viewer sxiv %s;
+image/pjpeg; ~/.mutt/viewer sxiv %s;
+image/gif; ~/.mutt/viewer sxiv %s;

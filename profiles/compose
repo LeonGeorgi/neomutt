@@ -1,0 +1,7 @@
+# vi: ft=neomuttrc
+source ~/.mutt/muttrc
+
+set editor = 'vim + -c "set fo+=aw" + -c "set nojs" + -c "set nosmartindent"'
+set resume_draft_files      # Do not ask for subject and recepient for draft files
+set autoedit
+

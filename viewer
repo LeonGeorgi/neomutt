@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+# Extract arguments
+_viewer="$1"
+shift
+
+while [ "$#" -gt "1" ]; do
+    _options="$_options $1"
+    shift
+done
+
+_file=$1
+
+# Create a temporary copy of the file.
+_tmp_dir=$(mktemp -d)
+cp "$_file" ${_tmp_dir}
+
+# Run the viewer in the background and delete everything
+# when the viewer is done.
+(
+    "$_viewer" $_options "${_tmp_dir}/$(basename $_file)" 2>/dev/null
+    rm -rf "$_tmp_dir"
+) &
