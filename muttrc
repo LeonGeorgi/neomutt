@@ -26,18 +26,25 @@ virtual-mailboxes "    Gesendet" "notmuch://?query=path:gmail-naytde/Sent/**"
 virtual-mailboxes "    Spam"     "notmuch://?query=path:gmail-naytde/Spam/**"
 
 set virtual_spoolfile=yes
-#set narrow_tree
+set quit = ask-yes # Ask on quit
 
-unset prompt_after
 
-## Writing mails
-set editor = '~/.mutt/editor %s'
-set text_flowed=yes
+### Writing mails ###
+#set editor = '~/.mutt/editor %s' # Write mails in a new window
+set editor = 'vim + -c "set fo+=aw" + -c "set nojs" + -c "set nosmartindent"'
+set text_flowed=yes             # Enable format=flowed for better mails
 set ispell = 'aspell -e -c'     # Spell check
 set edit_headers = yes          # Show headers in mail
 set include                     # Include copy of message when replying
 set abort_noattach = ask-yes    # Do not send mails without attachment
-set attach_keyword = "\\<(anhängen|angehängt|anhang|anhänge|hängt an|anhängig|attached|attachments?|anbei)\\>"
+set abort_noattach_regex = "\\<(anhängen|angehängt|anhang|anhänge|hängt an|anhängig|attached|attachments?|anbei)\\>"
+# set mime_forward = ask-no # Ask, if forwarded mails should be attached instead
+                            # of inlined
+set forward_quote               # Quote forwarded messages
+set forward_references          # Make forwarded mails part of the thread
+set ignore_list_reply_to        # Ignore Reply-To in lists. Use <list-reply>.
+set user_agent                  # Set User-Agent in outgoint mails
+# set postpone_encrypt          # Self-encrypt postponed messages
 
 
 
@@ -58,12 +65,17 @@ set reflow_wrap         = 100
 set wrap                = 100   # Wrap mails at 120 characters
 set pager_index_lines   = 10    # number of index lines to show
 set pager_context       = 5     # number of context lines to show
-set pager_stop
+set pager_stop                  # Don't move to next mail on <next-page>
+
+# Managing mails
+set auto_tag                    # Apply functions to all tagged messages
+set flag_safe                   # Don't delete flagged_messages
 
 alternative_order text/plain text/enriched text/html
 auto_view text/html             # Open HTML in viewer
 
-
+set prompt_after = no # Don't promt for a command when using an external pager
+set wait_key = no     # Don't ask to press any key.
 
 ### Paths ###
 set folder           = ~/.mail               # mailbox location
@@ -110,13 +122,15 @@ set reverse_name        # set the sender mail address to whomever it was origina
 set sendmail = 'msmtp'
 set use_from = yes
 set realname = "Leon Georgi"
-set envelope_from = yes
+set use_envelope_from = yes
 
 
 
 ### PGP ###
 set crypt_autosign
 set crypt_use_gpgme
+set crypt_opportunistic_encrypt # encrypt, if all recipients are known
+set crypt_protected_headers_write = yes # encrypt protected headers (subject)
 
 source "~/.mutt/accounts/ifsr"
 push <first-entry>
