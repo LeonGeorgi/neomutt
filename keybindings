@@ -53,3 +53,4 @@ macro index / "<vfolder-from-query>"
 bind attach <return> view-mailcap
 macro attach V "<pipe-entry>cat >/tmp/mail.html && firefox /tmp/mail.html<enter>"
 macro pager U "<pipe-entry> urlscan<enter>" 'Follow links with urlview'
+macro compose A "<shell-escape>$HOME/.mutt/attach<enter><enter-command>source /tmp/attachments<enter><shell-escape>$HOME/.mutt/attach clean<enter>" "Attach with Ranger"

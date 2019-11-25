@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+tmpfile=/tmp/attachments
+if \[ -z "$1" \]; then
+    ranger --choosefiles $tmpfile && sed -i -e 's/^/push <attach-file>/' -e 's/$/<enter>/' $tmpfile
+elif \[ $1 == "clean" \]; then
+    rm $tmpfile
+fi
