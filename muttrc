@@ -74,15 +74,8 @@ set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
 set tmpdir           = ~/.mutt/temp          # where to keep temp files
 
-
-alternates leon@ifsr.de
-alternates leon.georgi@tu-dresden.de s5973078@msx.tu-dresden.de leon.georgi@mailbox.tu-dresden.de
-alternates leon@deutschland.gmbh
-alternates leongeorgi98@gmail.com
-alternates naytde@gmail.com
-
-#subscribe -group fsr fsr@ifsr.de ese@ifsr.de
-
+### Set up own mail addresses and mailing lists ###
+source ~/.mutt/groups
 set nomark_old # Never mark unread mails as old
 
 
