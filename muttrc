@@ -31,7 +31,7 @@ set quit = ask-yes # Ask on quit
 
 ### Writing mails ###
 #set editor = '~/.mutt/editor %s' # Write mails in a new window
-set editor = 'vim + -c "set fo+=aw" + -c "set nojs" + -c "set nosmartindent"'
+set editor = 'nvim + -c "set fo+=aw" + -c "set nojs" + -c "set nosmartindent"'
 set text_flowed=yes             # Enable format=flowed for better mails
 set ispell = 'aspell -e -c'     # Spell check
 set edit_headers = yes          # Show headers in mail
