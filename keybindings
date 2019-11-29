@@ -17,7 +17,7 @@ bind pager <PageUp> previous-entry
 bind pager <PageDown> next-entry
 bind index,pager <Space> sidebar-open
 bind pager H display-toggle-weed
-bind index,pager g noop
+bind pager g noop
 bind pager gg top
 bind pager G bottom
 bind index,pager r noop
@@ -27,8 +27,9 @@ bind index,pager rl list-reply
 bind pager n search-next
 bind pager N search-opposite
 
-bind index gg first-entry
-bind index G last-entry
+bind index,attach,browser g noop
+bind index,attach,browser gg first-entry
+bind index,attach,browser G last-entry
 
 bind index - collapse-thread
 bind index _ collapse-all
