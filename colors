@@ -36,8 +36,11 @@ color   quoted4 red     default # quote level 5
 
 ### Highlighting in mail body ###
 # my name
-color body red default "Leons?\\b"
-color body red default "Georgis?\\b"
+color body red default "@?Leons?\\b"
+color body red default "@?Georgis?\\b"
+color body red default "@?LeonGeorgis?\\b"
+color body red default "@?Leon G\.\\b"
+
 # color body red default "Leon"
 # links
 color body brightblue default "(gopher|finger|ftp|http|telnet|https)://[^ >]*"
