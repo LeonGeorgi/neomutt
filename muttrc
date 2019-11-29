@@ -55,7 +55,7 @@ set sort            = reverse-threads            # Sorting mode
 set sort_aux        = last-date-received
 set date_format     = "%d.%m.%y %H:%M"                # use german date format for sanity reasons
 set hidden_tags     = inbox,unread,flagged,passed,replied,attachment,signed,encrypted
-set index_format    = "%g %?M?T& ? %3C %Z %d  %-20.20n (%-4.4c) %s"
+set index_format    = "%-1.1g %?M?T& ? %3C %Z %d  %-20.20n (%-4.4c) %s"
 
 
 # Pager
