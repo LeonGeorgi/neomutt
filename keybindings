@@ -39,13 +39,11 @@ bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Co sidebar-open
 
-macro index,pager <f2> "<enter-command>source ~/.mutt/accounts/ifsr<enter>"
-macro index,pager <f3> "<enter-command>source ~/.mutt/accounts/tu-dresden<enter>"
-
 bind index <PageDown> half-down
 bind index <PageUp> half-up
 
 macro index,pager <f5> "<pipe-entry>mbsync -a; notmuch new 2> /dev/null<enter>"
+macro index,pager <f6> "<pipe-entry>notmuch new 2> /dev/null; afew --move-mails<enter> "
 macro index,pager S "<modify-labels>!spam<enter>"
 macro index,pager A "<modify-labels>!archived<enter>"
 macro index / "<vfolder-from-query>"

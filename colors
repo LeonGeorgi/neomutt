@@ -110,7 +110,6 @@ color index magenta default "~C s5973078@mail\.zih\.tu-dresden\.de"
 color index brightmagenta color18 "~C s5973078@mail\.zih\.tu-dresden\.de ~N"
 color index color16 default "~C leon@ifsr.de"
 color index brightcolor16 color18 "~C leon@ifsr.de ~N"
-#color index_tag red white "spam"
 
 color index yellow default "~f board@ascii\.coffee"
 color index brightyellow color18 "~f board@ascii\.coffee ~N"

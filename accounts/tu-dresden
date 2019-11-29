@@ -1,6 +1,0 @@
-# vi: ft=neomuttrc
-
-macro index,pager A "<save-message>+tu-dresden/Archive<enter>" "Archive message"
-
-set record = +tu-dresden/Sent
-set postponed = +tu-dresden/Drafts

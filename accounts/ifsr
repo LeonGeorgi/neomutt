@@ -1,9 +1,0 @@
-# vi: ft=neomuttrc
-
-# Move sent mails to "Sent" folder
-set record = +ifsr/Sent
-# Move drafts to "Draft" folder
-set postponed = +ifsr/Drafts
-
-macro index,pager S "<save-message>+ifsr/Spam<enter>" "mark message as spam"
-macro index,pager A "<save-message>+ifsr/Archive<enter>" "Archive message"

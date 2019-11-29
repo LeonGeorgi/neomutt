@@ -54,7 +54,8 @@ set user_agent                  # Set User-Agent in outgoint mails
 set sort            = reverse-threads            # Sorting mode
 set sort_aux        = last-date-received
 set date_format     = "%d.%m.%y %H:%M"                # use german date format for sanity reasons
-set index_format    = "%?M?T& ? %3C %Z %d  %-20.20n (%-4.4c) %s" 
+set hidden_tags     = inbox,unread,flagged,passed,replied,attachment,signed,encrypted
+set index_format    = "%g %?M?T& ? %3C %Z %d  %-20.20n (%-4.4c) %s"
 
 
 # Pager
@@ -132,6 +133,9 @@ set crypt_use_gpgme
 set crypt_opportunistic_encrypt # encrypt, if all recipients are known
 set crypt_protected_headers_write = yes # encrypt protected headers (subject)
 
-source "~/.mutt/accounts/ifsr"
+set record = "~/.mail/record"
+#set nm_record = yes
+#set nm_record_tags = sent
+set postponed = "~/.mail/postponed"
 push <first-entry>
 set from = "leon@ifsr.de" #default account
